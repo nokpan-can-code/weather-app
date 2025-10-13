@@ -27,7 +27,7 @@ interface WeatherDataProps {
 
 const DisplayWeather = () => {
     const api_key = process.env.REACT_APP_WEATHER_API_KEY;
-    const api_Endpoint = "https://api.openweathermap.org/data/2.5/";
+    const api_Endpoint = process.env.REACT_APP_WEATHER_API_URL;
 
 const [weatherData, setWeatherData] = React.useState<WeatherDataProps | null >(null);
 const [isLoading, setIsLoading] = React.useState<boolean>(false);
